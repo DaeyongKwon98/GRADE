@@ -1,6 +1,6 @@
-# EMNLP_GRADE_MultiHop_QA_Generation
+# GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation
 
-This repository accompanies the paper GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation (Accepted to EMNLP Findings 2025). See the paper: [arXiv PDF](https://arxiv.org/pdf/2508.16994).
+This repository accompanies the paper GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation (Accepted to EMNLP Findings 2025). [Paper](https://arxiv.org/pdf/2508.16994)
 
 ## Environment setup
 - Conda (original environment list):
@@ -119,26 +119,19 @@ python eval/score_llm_eval.py
 python eval/retriever_correlation.py
 ```
 
-## Demo results (Sports)
-- Crawl size: ~500 articles (`FOLDER_PATH=sportsdemo`)
-- Sampled paths (post-dedup): 2-hop 110, 3-hop 28, 4-hop 1
-- Final QA (after validation):
-  - 2-hop: 72 items → accuracy 0.764 (LLM eval)
-  - 3-hop: 13 items → accuracy 0.538 (LLM eval)
-
-## 실행 예시
-- 뉴스 수집
+## Execution examples
+- News collection
 ```
 cd code
-python crawl_news.py  # .env의 MEDIASTACK_API_KEY 필요
+python crawl_news.py  # Requires MEDIASTACK_API_KEY in .env
 ```
 
-- DB 생성 (256 토큰 청크, overlap 50)
+- DB generation (256-token chunks, 50-token overlap)
 ```
 python generate_db_from_chunk.py
 ```
 
-- QA 생성 및 RAG 평가 (OpenAI API 필요)
+- QA generation and RAG evaluation (Requires OpenAI API)
 ```
 python qa.py
 python rag.py
@@ -146,7 +139,18 @@ python score_llm_eval.py
 python retriever_correlation.py
 ```
 
-## 공개 릴리즈 노트
-- 하드코딩된 API 키 제거 → `.env` 기반으로 로드
-- `OPENAI_API_KEY`, `MEDIASTACK_API_KEY` 사용
-- 재현 가능한 실행을 위해 사용 스크립트별 입력/출력 경로 주석 보강
+## Public Release Notes
+- Removed hardcoded API keys → Now loaded from .env
+- Uses OPENAI_API_KEY and MEDIASTACK_API_KEY
+- Added comments for input/output paths in each script for reproducible execution
+
+## Citation
+If you find this repository helpful, please cite the following paper!!
+```
+@article{lee2025grade,
+  title={GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation},
+  author={Lee, Jeongsoo and Kwon, Daeyong and Jin, Kyohoon},
+  journal={arXiv preprint arXiv:2508.16994},
+  year={2025}
+}
+```
