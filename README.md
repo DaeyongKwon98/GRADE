@@ -1,6 +1,12 @@
 # GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation
 
-This repository accompanies the paper GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation (Accepted to EMNLP Findings 2025). [Paper](https://arxiv.org/pdf/2508.16994)
+**GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation (Accepted to EMNLP Findings 2025).**
+
+Current benchmarks for Retrieval-Augmented Generation (RAG) systems often fail to test for the complex, multi-step reasoning required in real-world applications. To address this, we introduce **GRADE**, a new evaluation framework that measures RAG performance across a **2D difficulty matrix**, combining **reasoning depth** (number of hops) and **retrieval difficulty** (semantic distance between query and evidence). This repository provides the tools to generate a multi-hop QA dataset from news articles and evaluate RAG systems using our framework, enabling a more precise analysis of model performance on complex tasks.
+
+For more details, check out our [paper](https://arxiv.org/pdf/2508.16994)!
+
+<img width="4294" height="1773" alt="Image" src="https://github.com/user-attachments/assets/8f05865c-c74d-4710-bb7e-ca3b44153e87" />
 
 ## Environment setup
 - Conda (original environment list):
