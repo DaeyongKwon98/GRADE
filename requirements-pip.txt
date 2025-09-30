@@ -1,0 +1,14 @@
+openai
+python-dotenv
+neo4j-graphrag
+pandas
+numpy
+tqdm
+scikit-learn
+umap-learn
+newspaper3k
+lxml[html_clean]
+networkx
+nltk
+langchain-text-splitters
+tiktoken
