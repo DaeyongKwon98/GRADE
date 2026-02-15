@@ -153,10 +153,13 @@ python retriever_correlation.py
 ## Citation
 If you find this repository helpful, please cite the following paper!!
 ```
-@article{lee2025grade,
-  title={GRADE: Generating multi-hop QA and fine-gRAined Difficulty matrix for RAG Evaluation},
-  author={Lee, Jeongsoo and Kwon, Daeyong and Jin, Kyohoon},
-  journal={arXiv preprint arXiv:2508.16994},
-  year={2025}
+@inproceedings{lee2025grade,
+  title     = {GRADE: Generating Multi-hop QA and Fine-Grained Difficulty Matrix for RAG Evaluation},
+  author    = {Lee, Jeongsoo and Kwon, Daeyong and Jin, Kyohoon},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  year      = {2025},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2025.findings-emnlp.236/},
+  doi       = {10.18653/v1/2025.findings-emnlp.236}
 }
 ```
